@@ -36,6 +36,7 @@ const styles = StyleSheet.create({
     },
     text: {
         fontSize: 20,
+        color: 'black',
     },
     bold: {
         fontWeight: 'bold',
