@@ -15,11 +15,14 @@ const AddArticle = (props) => {
     }
 
     return ( 
-        <Modal visible={props.visible} animationType="slide">
+        <Modal visible={props.visible}>
             {props.children}
             <View style={styles.container}>
                 <View>
-                    <Image style={styles.image} source={{uri:'https://previews.123rf.com/images/dimagroshev/dimagroshev1603/dimagroshev160300048/53514673-vector-doodle-dessin-de-caddie-isol%C3%A9.jpg',}} />
+                    <Image 
+                    style={styles.image} 
+                    source={require('../../../assets/images/caddie.jpg')}
+                    />
                 </View>
                 <View style={styles.viewTextInput}>
                     <TextInput 
