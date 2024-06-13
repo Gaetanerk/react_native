@@ -1,3 +1,4 @@
+import { useLayoutEffect } from "react";
 import { FlatList, StyleSheet, Text, TouchableOpacity } from "react-native";
 
 const Exo4 = ({navigation}) => {
@@ -10,7 +11,12 @@ const Exo4 = ({navigation}) => {
         {id: 6, name: "Martinez", firstname: "Brian", number: "555-183-6428"},
         {id: 7, name: "Taylor", firstname: "Harry", number: "555-013-4963"},
         {id: 8, name: "Anderson", firstname: "Thomas", number: "555-031-2741"},
-    ]
+    ];
+
+    useLayoutEffect(() => {
+        navigation.setOptions({title: "Répertoire"});
+    });
+
     return ( 
         <>
         <FlatList

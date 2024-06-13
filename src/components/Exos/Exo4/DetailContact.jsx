@@ -1,6 +1,7 @@
+import { useLayoutEffect } from "react";
 import { Button, Linking, Text } from "react-native";
 
-const DetailContact = ({route}) => {
+const DetailContact = ({navigation, route}) => {
     const id = route.params.id;
     const name = route.params.name;
     const firstname = route.params.firstname;
@@ -9,6 +10,10 @@ const DetailContact = ({route}) => {
     function handleCallPress() {
         Linking.openURL('tel:' + number);
     }
+
+    useLayoutEffect(() => {
+        navigation.setOptions({title: name});
+    });
 
     return ( 
         <>
