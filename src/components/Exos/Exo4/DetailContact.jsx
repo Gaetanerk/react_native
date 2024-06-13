@@ -16,7 +16,7 @@ const DetailContact = ({route}) => {
             <Text>{name}</Text>
             <Text>{firstname}</Text>
             <Text>{number}</Text>
-            <Button title={number} onPress={handleCallPress} />
+            <Button title='Appeler' onPress={handleCallPress} />
         </>
      );
 }
