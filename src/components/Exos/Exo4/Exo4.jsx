@@ -13,10 +13,6 @@ const Exo4 = ({navigation}) => {
         {id: 8, name: "Anderson", firstname: "Thomas", number: "555-031-2741"},
     ];
 
-    useLayoutEffect(() => {
-        navigation.setOptions({title: "Répertoire"});
-    });
-
     return ( 
         <>
         <FlatList
@@ -24,16 +20,10 @@ const Exo4 = ({navigation}) => {
                 renderItem={itemData => {
                     return <TouchableOpacity 
                         onPress={() => navigation.navigate('DetailContact', {
-                            id: itemData.item.id, 
-                            name: itemData.item.name,
-                            firstname: itemData.item.firstname,
-                            number: itemData.item.number
+                            contact: itemData.item, 
                         })}>
                             <Text style={styles.text}>{itemData.item.name}</Text>
                         </TouchableOpacity>
-                }}
-                keyExtractor={(_, index) => {
-                    return index
                 }}
             />
         </>

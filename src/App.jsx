@@ -41,7 +41,7 @@ const App = () => {
         // </NavigationContainer>
         <NavigationContainer>
             <Stack.Navigator initialRouteName="Exo4">
-                <Stack.Screen name="Exo4" component={Exo4} options={{ headerShown: false }} />
+                <Stack.Screen name="Exo4" component={Exo4} options={{ headerShown: false }}/*{options={{ headerShown: false }} Supprime l'entête}*/ />
                 <Stack.Screen name="DetailContact" component={DetailContact} />
             </Stack.Navigator>
         </NavigationContainer>
