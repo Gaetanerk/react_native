@@ -32,7 +32,7 @@ const Exo2 = () => {
                 <Text style={styles.textMessage}>{message ? "Aucun article dans votre liste de courses." : ""}</Text>
             </View>
             <View style={styles.listArticle}>
-            <FlatList
+                <FlatList
                     data={articles}
                     renderItem={({ item, index }) => (
                         <TouchableOpacity style={styles.btnArticle} onPress={() => deleteArticle(index)}>
@@ -42,6 +42,11 @@ const Exo2 = () => {
                     keyExtractor={(_, index) => index.toString()}
                 />
             </View>
+            <View style={styles.button}>
+                <Button 
+                    title="Ajouter article"
+                    onPress={openModalArticle} />
+            </View>
             <View>
                 <AddArticle 
                     visible={visible} 
@@ -50,11 +55,6 @@ const Exo2 = () => {
                     setArticles={setArticles}
                     articles={articles}
                 />
-            </View>
-            <View style={styles.button}>
-                <Button 
-                    title="Ajouter article"
-                    onPress={openModalArticle} />
             </View>
         </View>
      );
@@ -81,7 +81,7 @@ const styles = StyleSheet.create({
     btnArticle: {
         marginBottom: 20,
         width: 400,
-        backgroundColor: 'blue',
+        backgroundColor: '#5e0acc',
         borderRadius: 8,
         paddingVertical: 10,
         paddingHorizontal: 20,
